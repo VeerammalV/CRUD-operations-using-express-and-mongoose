@@ -13,12 +13,7 @@ app.use("/api", contact);
 //connect to mongodb
 const connectToDb =async()=>{
   try{
-    await mongoose.connect('mongodb://127.0.0.1:27017/mydb',
-    // {
-    //   useNewUrlparser:true,
-    //   useUnifiedTopology:true
-    // }
-    );
+    await mongoose.connect('mongodb://127.0.0.1:27017/mydb');
     console.log('connected to database')
   } catch(error){
       console.log(error);
